@@ -1,0 +1,28 @@
+/* Enter your custom styles here */
+.sapMCrslBulleted {
+    /* width: 100%;
+    position: relative;
+    bottom: 0;
+    align-self: center; */
+    display: none !important;
+}
+
+.sapMListHdr {
+    border-top-right-radius: 0.75rem !important;
+    border-top-left-radius: 0.75rem !important;
+    border-bottom-left-radius: 0.75rem !important;
+    border-bottom-right-radius: 0.75rem !important;
+    background-color: gold !important;
+}
+
+.sapTntToolHeader.sapMTB {
+    background-color: gold !important;
+    position: sticky !important;
+}
+
+.stickyToolbar{
+    position: sticky;
+    top: 0;
+    background-color: white; /* Change to the desired background color */
+    z-index: 1000; /* Set z-index to ensure it's above other content */
+}

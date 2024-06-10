@@ -1,0 +1,109 @@
+<mvc:View controllerName="com.ibspl.shppingcart.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:form="sap.ui.layout.form"
+		xmlns:core="sap.ui.core"
+		xmlns:u="sap.ui.unified"
+		xmlns="sap.m" 
+        xmlns:f="sap.f"
+        xmlns:cards="sap.f.cards"
+        xmlns:tnt="sap.tnt" > 
+    <Page id="page" title="{i18n>title}" showHeader="true">
+        <content>
+        	
+	<tnt:ToolHeader id="toolbar" class="stickyToolbar">
+    <Title text="Shopping App" wrapping="false" id="productName">
+				<layoutData>
+					<OverflowToolbarLayoutData priority="Disappear"/>
+				</layoutData>
+			</Title>
+            <ToolbarSpacer/>
+    <SearchField ariaLabelledBy="text1" id="maxPrice" liveChange="onFilter">
+							<layoutData><OverflowToolbarLayoutData maxWidth="250px" shrinkable="true" priority="NeverOverflow"/></layoutData>
+						</SearchField>
+                        <Button text="Home" press="scrollToSection2('Home')"   />
+                        <Button text="Mobiles" press="scrollToSection2('Mobile')"  />
+                        <Button text="Fashion" press="scrollToSection2('Fashion')"  /> 
+                        <Button text="Appliances" press="scrollToSection2"  />
+                        <Button text="Toys" press="scrollToSection2" />
+                        
+                        <ToolbarSpacer/>
+                        <Button icon="sap-icon://cart-3" press="onC]artPg" >
+                        <customData>
+                            <BadgeCustomData id="cartBadge" value="{products1>/cartCount}"  />
+                        </customData>
+                        </Button>
+                        <Button icon="sap-icon://timesheet" type="Transparent"  press="onAccDetl"/>
+    </tnt:ToolHeader>
+
+                    <VBox id="Home" class="sapUiSmallMarginBottom">
+                    <Carousel id="carImg" height="auto" pages="{path: 'products>/HomeImag'}" loop="true" pageChanged="handleNavigate" backgroundDesign="Translucent"  >
+                     <Image src="{products>ProductPicUrl}" alt="Example picture of USB flash drive" />
+
+                    </Carousel>
+                    </VBox>
+
+        <VBox id="Mobile" class="sapUiSmallMarginBottom">
+                    <f:GridList id="gridList" headerText="Products" headerLevel="H4" items="{products>/ProductCollection}">
+            <f:GridListItem>
+                <VBox class="sapUiSmallMargin">
+                    <layoutData>
+                        <FlexItemData growFactor="1" shrinkFactor="0" /> <!-- Don't shrink below minimum size. Fill space if available. -->
+                    </layoutData>
+
+                    <Title text="{products>Name}" wrapping="true" />
+                    <Label text="{subtitle}" wrapping="true" />
+                    <Image src="{products>ProductPicUrl}" height="200px" width="200px"></Image>
+                    <HBox>
+                                    <StepInput  id="idQty" value="1"></StepInput>
+                                    <Button  icon ="sap-icon://cart-2"  id = "button" press="onShoppingCartPressed"/>
+                                    </HBox>
+
+                                    
+                </VBox>
+            </f:GridListItem>
+        </f:GridList>
+        </VBox>
+
+        <VBox id="Fashion" class="sapUiSmallMarginBottom">
+                    <f:GridList
+             headerText="Products" headerLevel="H4"         
+            items="{products>/ProductCollection}"
+			>
+            <f:GridListItem>
+                <VBox class="sapUiSmallMargin">
+                    <layoutData>
+                        <FlexItemData growFactor="1" shrinkFactor="0" /> <!-- Don't shrink below minimum size. Fill space if available. -->
+                    </layoutData>
+
+                    <Title text="{products>Name}" wrapping="true" />
+                    <Label text="{subtitle}" wrapping="true" />
+                    <Image src="{products>ProductPicUrl}" height="200px" width="200px">
+                    </Image>
+                    <HBox>
+                                    <StepInput   value="1"></StepInput>
+                                    <Button  icon ="sap-icon://cart-2" press="onShoppingCartPressed"/>
+                                    </HBox>
+
+                                    
+                </VBox>
+            </f:GridListItem>
+        </f:GridList>
+        </VBox>
+
+               <u:FileUploader
+										
+										name="myFileUpload"
+										uploadUrl="upload/"
+										placeholder="Choose a file for Upload..."
+										tooltip="Upload your file to the local server"
+										buttonText="Browse"
+										style="Emphasized"
+										uploadComplete="handleUploadComplete"
+										change="handleUploadPress3"
+										 visible="{viewModel>/btnEnable}" />     	
+        </content>
+    </Page>
+  
+</mvc:View>
+
+
