@@ -38,7 +38,6 @@
                     <VBox id="Home" class="sapUiSmallMarginBottom">
                     <Carousel id="carImg" height="auto" pages="{path: 'products>/HomeImag'}" loop="true" pageChanged="handleNavigate" backgroundDesign="Translucent"  >
                      <Image src="{products>ProductPicUrl}" alt="Example picture of USB flash drive" />
-
                     </Carousel>
                     </VBox>
 
@@ -49,6 +48,7 @@
                     <layoutData>
                         <FlexItemData growFactor="1" shrinkFactor="0" /> <!-- Don't shrink below minimum size. Fill space if available. -->
                     </layoutData>
+                    
 
                     <Title text="{products>Name}" wrapping="true" />
                     <Label text="{subtitle}" wrapping="true" />
