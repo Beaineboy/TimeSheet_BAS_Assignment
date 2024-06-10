@@ -33,6 +33,7 @@
                         </customData>
                         </Button>
                         <Button icon="sap-icon://timesheet" type="Transparent"  press="onAccDetl"/>
+                        <Button icon="sap-icon://timesheet" type="Transparent"  press="onAccDetl"/>
     </tnt:ToolHeader>
 
                     <VBox id="Home" class="sapUiSmallMarginBottom">
