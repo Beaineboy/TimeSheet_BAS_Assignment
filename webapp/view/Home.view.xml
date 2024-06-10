@@ -38,7 +38,6 @@
                     <VBox id="Home" class="sapUiSmallMarginBottom">
                     <Carousel id="carImg" height="auto" pages="{path: 'products>/HomeImag'}" loop="true" pageChanged="handleNavigate" backgroundDesign="Translucent"  >
                      <Image src="{products>ProductPicUrl}" alt="Example picture of USB flash drive" />
-
                     </Carousel>
                     </VBox>
 
