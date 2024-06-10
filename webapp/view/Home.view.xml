@@ -48,6 +48,7 @@
                     <layoutData>
                         <FlexItemData growFactor="1" shrinkFactor="0" /> <!-- Don't shrink below minimum size. Fill space if available. -->
                     </layoutData>
+                    
 
                     <Title text="{products>Name}" wrapping="true" />
                     <Label text="{subtitle}" wrapping="true" />
