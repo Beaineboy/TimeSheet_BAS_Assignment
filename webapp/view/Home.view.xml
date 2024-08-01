@@ -6,7 +6,7 @@
 		xmlns="sap.m" 
         xmlns:f="sap.f"
         xmlns:cards="sap.f.cards"
-        xmlns:tnt="sap.tnt" > 
+        xmlns:tnt="sap.tnt" > `
     <Page id="page" title="{i18n>title}" showHeader="true">
         <content>
         	
